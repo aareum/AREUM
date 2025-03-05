@@ -4,9 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AREUM GALLERY</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>AREUM 전시</h1>
-    <p>여기는 아름의 작품을 전시하는 공간입니다.</p>
+    <header>
+        <img src="main.jpg" alt="메인 이미지" class="main-image">
+        <h1>AREUM GALLERY</h1>
+    </header>
+
+    <nav>
+        <button onclick="showGallery('exhibition')">작품 전시</button>
+        <button onclick="showGallery('option2')">미정</button>
+        <button onclick="showGallery('option3')">미정</button>
+    </nav>
+
+    <section id="gallery" class="gallery hidden">
+        <div class="artwork" onclick="showDetails('art1')">
+            <img src="art1.jpg" alt="작품 1">
+            <p>작품 1</p>
+        </div>
+        <div class="artwork" onclick="showDetails('art2')">
+            <img src="art2.jpg" alt="작품 2">
+            <p>작품 2</p>
+        </div>
+    </section>
+
+    <section id="details" class="details hidden">
+        <img id="detail-image" src="" alt="작품 이미지">
+        <p id="detail-description"></p>
+        <button onclick="hideDetails()">닫기</button>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
